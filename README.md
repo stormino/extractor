@@ -39,8 +39,7 @@ Please note that `sensorId` parameter is not mandatory, while `DateFrom` and `Da
 ## Implementation considerations
 ### Modularization
 
-To increase service modularization (e.g.: to provide easy interchangeable components such as repository and message broker), 
-There have been two different approaches:
+To avoid strong coupling and technology lock-in (e.g.: to provide easy interchangeable components such as repository and message broker),
 1. About persistence, a classic design using interfaces and Spring Data capabilities and IoC. Changing repository (e.g.: moving
 from MongoDB to a SQL like database) will consist in adding dependencies, implementing entity classes and 
 writing a class that implements `SequenceRepository` interface.
