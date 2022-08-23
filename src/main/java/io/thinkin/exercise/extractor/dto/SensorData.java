@@ -2,19 +2,18 @@ package io.thinkin.exercise.extractor.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.Date;
 
 @Getter
-@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @ToString
 public class SensorData {
 
     @JsonProperty(value = "sensor_id", required = true)
-    private Integer id;
+    private Integer sensorId;
 
     @JsonProperty(value = "value", required = true)
     private Integer value;
